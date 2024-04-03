@@ -72,7 +72,7 @@ const Document = withEmotionCache(
             content="emotion-insertion-point"
           />
         </head>
-        <body>
+        <body className="bg-[#F8F8F8]">
           {children}
           <ScrollRestoration />
           <Scripts />

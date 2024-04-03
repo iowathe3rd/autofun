@@ -124,10 +124,11 @@ const TopLine: React.FC = () => {
           </Box>
         </Container>
       ) : (
-        <Box
+        <Container
           sx={{
             display: "flex",
             justifyContent: "space-between",
+            paddingY: "10px",
           }}
         >
           <img src="/assets/logo.jpg" alt="logo" height={"42px"} />
@@ -144,7 +145,7 @@ const TopLine: React.FC = () => {
               );
             })}
           </Box>
-        </Box>
+        </Container>
       )}
     </Box>
   );

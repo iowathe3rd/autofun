@@ -13,6 +13,7 @@ const SearchField: React.FC<OutlinedInputProps> = (props) => {
         sx={{
           width: "100%",
           height: "42px",
+          padding: 0,
         }}
         {...props}
         placeholder="„Geben Sie den gesuchten Text ein“"

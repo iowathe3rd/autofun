@@ -1,5 +1,6 @@
 // import { useMediaQuery } from "@mui/material";
 import React from "react";
+import BreadCrumbs from "../components/common/BreadCrumbs";
 import MiddleLine from "../components/header/MiddleLine";
 import TopLine from "../components/header/TopLine";
 // import { theme } from "../lib/mui";
@@ -11,11 +12,11 @@ const Layout: React.FC<{
   //   theme.breakpoints.up("xl"),
   // );
   return (
-    <main className="bg-[#F8F8F8]">
+    <React.Fragment>
       <TopLine />
       <MiddleLine />
-      {children}
-    </main>
+      <main>{children}</main>
+    </React.Fragment>
   );
 };
 
