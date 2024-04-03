@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Typography, useMediaQuery } from "@mui/material";
 import { useState } from "react";
 import SearchField from "~/src/components/SearchField";
 import TopCartWidget from "~/src/components/header/TopCartWidget";
@@ -9,6 +9,9 @@ const tabs = ["Teilnummer"];
 const MiddleLine = () => {
   const [activeTab] = useState(0);
 
+  const isUpXl = useMediaQuery<typeof theme>((theme) =>
+    theme.breakpoints.up("xl"),
+  );
   // const handleChange = (event: React.SyntheticEvent, newValue: number) => {
   //   setActivetab(newValue);
   // };
@@ -21,11 +24,16 @@ const MiddleLine = () => {
         justifyContent: "space-between",
       }}
     >
-      <img src="/assets/logo.jpg" alt="autofun" height={"112px"} />
+      {isUpXl ? (
+        <img src="/assets/logo.jpg" alt="autofun" height={"112px"} />
+      ) : undefined}
       <Box
         sx={{
           flexGrow: "1",
-          maxWidth: "50%",
+          maxWidth: {
+            xs: "100%",
+            xl: "50%",
+          },
         }}
       >
         <SearchField />
@@ -67,7 +75,7 @@ const MiddleLine = () => {
           </Typography>
         </Box>
       </Box>
-      <TopCartWidget number={4} />
+      {isUpXl ? <TopCartWidget number={4} /> : undefined}
     </Container>
   );
 };
