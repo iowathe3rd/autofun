@@ -21,7 +21,7 @@ const MiddleLine = () => {
         justifyContent: "space-between",
       }}
     >
-      <img src="/assets/logo.png" alt="autofun" />
+      <img src="/assets/logo.jpg" alt="autofun" height={"112px"} />
       <Box
         sx={{
           flexGrow: "1",
