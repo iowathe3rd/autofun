@@ -16,6 +16,13 @@ import ClientStyleContext from "./src/context/ClientStyleContext";
 import Layout from "./src/layout/MainLayout";
 import { theme } from "./src/lib/mui";
 
+import type { LinksFunction } from "@remix-run/node";
+import stylesheet from "~/tailwind.css?url";
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: stylesheet },
+];
+
 interface DocumentProps {
   children: React.ReactNode;
   title?: string;
