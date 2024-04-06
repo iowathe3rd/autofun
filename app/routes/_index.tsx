@@ -1,6 +1,7 @@
 import { Box, Container, Typography } from "@mui/material";
 import type { MetaFunction } from "@remix-run/node";
 import BreadCrumbs from "~/src/components/common/BreadCrumbs";
+import ProductsSection from "~/src/sections/search/Products";
 import TopBar from "~/src/sections/search/TopBar";
 
 export const meta: MetaFunction = () => {
@@ -31,6 +32,7 @@ export default function Index() {
       >
         <TopBar searchItem="2345872" />
       </Box>
+      <ProductsSection />
     </Container>
   );
 }
