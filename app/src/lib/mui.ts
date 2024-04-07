@@ -25,30 +25,30 @@ export const theme = createTheme({
         }),
       },
     },
-    MuiOutlinedInput: {
-      styleOverrides: {
-        root: ({ theme }) => ({
-          "& label.Mui-focused": {
-            color: theme.palette.primary.main,
-          },
-          "&.MuiInput-underline:after": {
-            borderBottomColor: "#B2BAC2",
-          },
-          "&.MuiOutlinedInput-root": {
-            borderRadius: "40px",
-            "& fieldset": {
-              borderColor: "#606060",
-            },
-            "&:hover fieldset": {
-              borderColor: theme.palette.primary.main,
-            },
-            "&.Mui-focused fieldset, &:hover fieldset, &.Mui-focused:hover fieldset":
-              {
-                border: `1px solid ${theme.palette.primary.main}`,
-              },
-          },
-        }),
-      },
-    },
+    // MuiOutlinedInput: {
+    //   styleOverrides: {
+    //     root: ({ theme }) => ({
+    //       "& label.Mui-focused": {
+    //         color: theme.palette.primary.main,
+    //       },
+    //       "&.MuiInput-underline:after": {
+    //         borderBottomColor: "#B2BAC2",
+    //       },
+    //       "&.MuiOutlinedInput-root": {
+    //         borderRadius: "40px",
+    //         "& fieldset": {
+    //           borderColor: "#606060",
+    //         },
+    //         "&:hover fieldset": {
+    //           borderColor: theme.palette.primary.main,
+    //         },
+    //         "&.Mui-focused fieldset, &:hover fieldset, &.Mui-focused:hover fieldset":
+    //           {
+    //             border: `1px solid ${theme.palette.primary.main}`,
+    //           },
+    //       },
+    //     }),
+    //   },
+    // },
   },
 });

@@ -3,10 +3,12 @@ import {
   InputAdornment,
   OutlinedInput,
   OutlinedInputProps,
+  useTheme,
 } from "@mui/material";
 import { Form } from "@remix-run/react";
 
 const SearchField: React.FC<OutlinedInputProps> = (props) => {
+  const theme = useTheme();
   return (
     <Form method="GET" action="/">
       <OutlinedInput
@@ -14,6 +16,26 @@ const SearchField: React.FC<OutlinedInputProps> = (props) => {
           width: "100%",
           height: "42px",
           padding: 0,
+
+          "& label.Mui-focused": {
+            color: theme.palette.primary.main,
+          },
+          "&.MuiInput-underline:after": {
+            borderBottomColor: "#B2BAC2",
+          },
+          "&.MuiOutlinedInput-root": {
+            borderRadius: "40px",
+            "& fieldset": {
+              borderColor: "#606060",
+            },
+            "&:hover fieldset": {
+              borderColor: theme.palette.primary.main,
+            },
+            "&.Mui-focused fieldset, &:hover fieldset, &.Mui-focused:hover fieldset":
+              {
+                border: `1px solid ${theme.palette.primary.main}`,
+              },
+          },
         }}
         {...props}
         placeholder="„Geben Sie den gesuchten Text ein“"
