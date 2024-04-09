@@ -1,4 +1,10 @@
-import { Box, OutlinedInput, Typography, useTheme } from "@mui/material";
+import {
+  Box,
+  Button,
+  OutlinedInput,
+  Typography,
+  useTheme,
+} from "@mui/material";
 
 const Feedback: React.FC = () => {
   const theme = useTheme();
@@ -55,7 +61,7 @@ const Feedback: React.FC = () => {
           <OutlinedInput
             type="text"
             sx={{
-              width: "80%",
+              width: "unset",
               height: "40px",
             }}
           />
@@ -73,7 +79,7 @@ const Feedback: React.FC = () => {
           <OutlinedInput
             type="text"
             sx={{
-              width: "80%",
+              width: "unset",
               height: "40px",
             }}
           />
@@ -91,7 +97,7 @@ const Feedback: React.FC = () => {
           <OutlinedInput
             type="text"
             sx={{
-              width: "80%",
+              width: "unset",
               height: "40px",
             }}
           />
@@ -109,7 +115,7 @@ const Feedback: React.FC = () => {
           <OutlinedInput
             type="text"
             sx={{
-              width: "80%",
+              width: "unset",
               height: "40px",
             }}
           />
@@ -128,10 +134,28 @@ const Feedback: React.FC = () => {
             type="text"
             sx={{
               width: "80%",
-              height: "40px",
+              height: "170px",
             }}
           />
         </div>
+        <Box
+          sx={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "flex-end",
+          }}
+        >
+          <Button
+            variant="contained"
+            color="primary"
+            sx={{
+              textAlign: "right",
+              color: "white",
+            }}
+          >
+            SENDEN
+          </Button>
+        </Box>
       </Box>
     </Box>
   );

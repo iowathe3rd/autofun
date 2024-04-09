@@ -1,6 +1,7 @@
 // import { useMediaQuery } from "@mui/material";
+import { Box } from "@mui/material";
 import React from "react";
-import BreadCrumbs from "../components/common/BreadCrumbs";
+import background from "~/src/assets/background.jpg";
 import MiddleLine from "../components/header/MiddleLine";
 import TopLine from "../components/header/TopLine";
 // import { theme } from "../lib/mui";
@@ -12,11 +13,18 @@ const Layout: React.FC<{
   //   theme.breakpoints.up("xl"),
   // );
   return (
-    <React.Fragment>
+    <Box
+      sx={{
+        backgroundImage: `url(${background})`,
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "contain",
+      }}
+    >
       <TopLine />
       <MiddleLine />
       <main>{children}</main>
-    </React.Fragment>
+    </Box>
   );
 };
 

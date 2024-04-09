@@ -28,7 +28,7 @@ export default function Index() {
       <BreadCrumbs items={breadcrumbs} />
       <Box
         sx={{
-          marginTop: "20px",
+          marginY: "20px",
         }}
       >
         <TopBar searchItem="2345872" />
