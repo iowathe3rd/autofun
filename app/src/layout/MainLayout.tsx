@@ -2,6 +2,7 @@
 import { Box } from "@mui/material";
 import React from "react";
 import background from "~/src/assets/background.jpg";
+import Footer from "../components/footer/Footer";
 import MiddleLine from "../components/header/MiddleLine";
 import TopLine from "../components/header/TopLine";
 // import { theme } from "../lib/mui";
@@ -24,6 +25,7 @@ const Layout: React.FC<{
       <TopLine />
       <MiddleLine />
       <main>{children}</main>
+      <Footer />
     </Box>
   );
 };

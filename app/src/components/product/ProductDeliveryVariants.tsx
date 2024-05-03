@@ -87,8 +87,11 @@ const ProductDeliveryVariant: React.FC<{
       sx={{
         borderTop: "1px solid rgba(229, 229, 229, 1)",
         padding: "10px",
-        height: "64px",
         display: "flex",
+        flexDirection: {
+          xs: "column",
+          lg: "row",
+        },
         alignItems: "center",
       }}
     >
@@ -110,8 +113,16 @@ const ProductDeliveryVariant: React.FC<{
       </Box>
       <Box
         sx={{
-          marginLeft: "auto",
+          width: "100%",
+          marginLeft: {
+            xs: "unset",
+            lg: "auto",
+          },
           display: "flex",
+          justifyContent: {
+            xs: "space-around",
+            lg: "flex-end",
+          },
           gap: "20px",
           textAligt: "center",
         }}

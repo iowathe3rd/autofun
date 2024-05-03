@@ -14,7 +14,7 @@ const Feedback: React.FC = () => {
         backgroundColor: "white",
         width: "100%",
         padding: {
-          xl: "41px 1px 41px 1px",
+          lg: "41px 1px 41px 1px",
         },
         gap: "10px",
         display: "flex",

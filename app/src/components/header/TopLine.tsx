@@ -1,10 +1,4 @@
-import {
-  Box,
-  Button,
-  Container,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, Container, Typography, useMediaQuery } from "@mui/material";
 import { Link } from "@remix-run/react";
 import { theme } from "~/src/lib/mui";
 
@@ -30,8 +24,8 @@ const buttons = [
 ];
 
 const TopLine: React.FC = () => {
-  const isUpXl = useMediaQuery<typeof theme>((theme) =>
-    theme.breakpoints.up("xl"),
+  const isUpLg = useMediaQuery<typeof theme>((theme) =>
+    theme.breakpoints.up("lg"),
   );
   return (
     <Box
@@ -39,7 +33,7 @@ const TopLine: React.FC = () => {
         background: "white",
       }}
     >
-      {isUpXl ? (
+      {isUpLg ? (
         <Container>
           <Box
             sx={{

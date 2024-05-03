@@ -41,7 +41,7 @@ const TopBar: React.FC<TopBarProps> = (props) => {
           display: "flex",
           flexDirection: {
             xs: "column",
-            xl: "row",
+            lg: "row",
           },
           gap: { xs: "10px", xl: "30px" },
         }}
@@ -60,6 +60,9 @@ const TopBar: React.FC<TopBarProps> = (props) => {
             value={age}
             size="small"
             onChange={handleChange}
+            sx={{
+              maxWidth: "270px",
+            }}
           >
             <MenuItem value={10}>Ten</MenuItem>
             <MenuItem value={20}>Twenty</MenuItem>

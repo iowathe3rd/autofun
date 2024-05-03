@@ -25,7 +25,6 @@ export default function Index() {
         paddingY: "45px",
       }}
     >
-      <BreadCrumbs items={breadcrumbs} />
       <Box
         sx={{
           marginY: "20px",

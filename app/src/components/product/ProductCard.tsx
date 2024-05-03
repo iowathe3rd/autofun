@@ -27,7 +27,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         backgroundColor: "white",
         flexDirection: {
           xs: "column",
-          xl: "row",
+          lg: "row",
         },
       }}
     >

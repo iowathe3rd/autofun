@@ -9,8 +9,8 @@ const tabs = ["Teilnummer"];
 const MiddleLine = () => {
   const [activeTab] = useState(0);
 
-  const isUpXl = useMediaQuery<typeof theme>((theme) =>
-    theme.breakpoints.up("xl"),
+  const isUpLg = useMediaQuery<typeof theme>((theme) =>
+    theme.breakpoints.up("lg"),
   );
   // const handleChange = (event: React.SyntheticEvent, newValue: number) => {
   //   setActivetab(newValue);
@@ -24,15 +24,14 @@ const MiddleLine = () => {
         justifyContent: "space-between",
       }}
     >
-      {isUpXl ? (
+      {isUpLg ? (
         <img src="/assets/logo.jpg" alt="autofun" height={"112px"} />
       ) : undefined}
       <Box
         sx={{
           flexGrow: "1",
           maxWidth: {
-            xs: "100%",
-            xl: "50%",
+            maxWidth: "480px",
           },
         }}
       >
@@ -75,7 +74,7 @@ const MiddleLine = () => {
           </Typography>
         </Box>
       </Box>
-      {isUpXl ? <TopCartWidget number={4} /> : undefined}
+      {isUpLg ? <TopCartWidget number={4} /> : undefined}
     </Container>
   );
 };
