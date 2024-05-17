@@ -34,9 +34,13 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       <Box
         sx={{
           padding: "15px",
+          width: {
+            xs: "100%",
+            lg: "unset",
+          },
         }}
       >
-        <img src={product.imageSrc} alt="product" width={200} />
+        <img src={product.imageSrc} alt="product" className="w-full" />
       </Box>
       <Stack
         sx={{

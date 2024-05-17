@@ -1,4 +1,6 @@
-import { Box, Stack } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
+import Switch from "../common/Switch";
+import ProductDeliveryVariants from "./ProductDeliveryVariants";
 
 interface ProductSingleCardProps {
   title: string;
@@ -19,26 +21,91 @@ interface ProductSingleCardProps {
 
 const ProductSingleCard: React.FC<ProductSingleCardProps> = (props) => {
   return (
-    <Stack>
-      <Box
+    <Stack
+      sx={{
+        width: "100%",
+      }}
+    >
+      <Stack></Stack>
+      <Stack
         sx={{
-          display: "flex",
-          flexDirection: {
-            xs: "column",
-            lg: "row",
+          width: {
+            xs: "100%",
+            lg: "30%",
           },
         }}
       >
-        <Stack>
-          <img src={props.images[0]} alt={props.title} width={700} />
-          <Box
-            sx={{
-              display: "flex",
-            }}
-          ></Box>
+        <Typography
+          sx={{
+            fontWeight: "700",
+            fontSize: "27px",
+            lineHeight: "32px",
+          }}
+        >
+          {props.title}
+        </Typography>
+        <Stack
+          sx={{
+            width: "100%",
+          }}
+        >
+          {props.tableData.map((value, index) => {
+            return (
+              <Box
+                key={index}
+                sx={{
+                  display: "flex",
+                  height: "34px",
+                }}
+              >
+                <Box
+                  sx={{
+                    backgroundColor: "rgba(220, 218, 222, 1)",
+                    borderStyle: "dotted",
+                    borderWidth: "1px",
+                    borderColor: "rgba(220, 218, 222, 1)",
+                    width: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    paddingLeft: "10px",
+                  }}
+                >
+                  <Typography sx={{ fontWeight: 400, fontSize: "15px" }}>
+                    {value.label}
+                  </Typography>
+                </Box>
+                <Box
+                  sx={{
+                    backgroundColor: "rgba(220, 218, 222, 1)",
+                    borderStyle: "dotted",
+                    borderWidth: "1px",
+                    borderColor: "rgba(220, 218, 222, 1)",
+                    width: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    paddingLeft: "10px",
+                  }}
+                >
+                  <Typography sx={{ fontWeight: 700, fontSize: "15px" }}>
+                    {value.label}
+                  </Typography>
+                </Box>
+              </Box>
+            );
+          })}
         </Stack>
-        <Box></Box>
-      </Box>
+        <Box>
+          <Stack direction="row" spacing={1} alignItems="center">
+            <Typography>Verkaufpreis</Typography>
+            <Switch
+              defaultChecked
+              inputProps={{ "aria-label": "ant design" }}
+            />
+            <Typography>Einkaufspreis</Typography>
+          </Stack>
+        </Box>
+        <ProductDeliveryVariants delivery={props.delivery} />
+      </Stack>
     </Stack>
   );
 };
